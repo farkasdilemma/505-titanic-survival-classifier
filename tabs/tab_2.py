@@ -6,7 +6,8 @@ choices=['Comparison of Models',
 'Final Model Metrics',
 'ROC-AUC',
 'Confusion Matrix',
-'Regression Coefficients']
+#'Regression Coefficients'
+'Feature Importance']
 
 tab_2_layout = html.Div([
     html.H3('Model Evaluation Statistics'),

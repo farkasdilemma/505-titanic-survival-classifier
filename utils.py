@@ -136,16 +136,18 @@ def display_eval_metrics(value):
 
     # Odds of Survival (Coefficients)
     elif value==choices[4]:
-        coeffs=pd.read_csv('resources/coefficients.csv')
+        #coeffs=pd.read_csv('resources/coefficients.csv')
+        feature_weights=pd.read_csv('resources/feature_importance.csv')
         mydata = [go.Bar(
             x=coeffs['feature'],
-            y=coeffs['coefficient'],
+            y=coeffs['weight'],
             marker=dict(color=Viridis[::-6])
         )]
         mylayout = go.Layout(
             title='Married women in 1st class had better odds of survival, especially if younger than 38',
             xaxis = {'title': 'Passenger Features'},
-            yaxis = {'title': 'Odds of Survival'},
+            yaxis = {'title': 'Feature Weight'},
+#            yaxis = {'title': 'Odds of Survival'},
 
         )
         fig = go.Figure(data=mydata, layout=mylayout)
