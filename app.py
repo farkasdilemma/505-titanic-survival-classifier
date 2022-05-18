@@ -148,7 +148,7 @@ def final_prediction(family, age, cabin, title, sex, embark):
     df=df[['family', 'female', 'second', 'third', 'cherbourg', 'queenstown', 'age2028',
     'age2838', 'age3880', 'mrs', 'miss', 'vip']]
     # unpickle the final model
-    file = open('resources/final_logreg_model.pkl', 'rb')
+    file = open('resources/final_rf_model.pkl', 'rb')
     logreg=pickle.load(file)
     file.close()
     # predict on the user-input values (need to create an array for this)
