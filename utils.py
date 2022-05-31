@@ -140,13 +140,13 @@ def display_eval_metrics(value):
         feature_weights=pd.read_csv('resources/feature_importance.csv')
         mydata = [go.Bar(
             x=feature_weights['feature'],
-            y=feature_weights['coefficient'],
+            y=feature_weights['importance'],
             marker=dict(color=Viridis[::-6])
         )]
         mylayout = go.Layout(
-            title='Married women in 1st class had better odds of survival, especially if younger than 38',
+            title='Married women in Cabin Class 3 had higher odds of survival, especially if they were married or had other family onboard',
             xaxis = {'title': 'Passenger Features'},
-            yaxis = {'title': 'Feature Weight'},
+            yaxis = {'title': 'Feature Importance'},
 #            yaxis = {'title': 'Odds of Survival'},
 
         )
