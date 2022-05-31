@@ -140,7 +140,7 @@ def display_eval_metrics(value):
         feature_weights=pd.read_csv('resources/feature_importance.csv')
         mydata = [go.Bar(
             x=coeffs['feature'],
-            y=coeffs['weight'],
+            y=coeffs['coefficient'],
             marker=dict(color=Viridis[::-6])
         )]
         mylayout = go.Layout(
